@@ -6,7 +6,6 @@ from circleshape import *
 class Shot(CircleShape):
     def __init__(self, x, y,):
         super().__init__(x, y, SHOT_RADIUS)
-        print("four")
 
         self.image = pygame.Surface((SHOT_RADIUS * 2, SHOT_RADIUS * 2), pygame.SRCALPHA)
         pygame.draw.circle(self.image, "white", (SHOT_RADIUS, SHOT_RADIUS), SHOT_RADIUS)

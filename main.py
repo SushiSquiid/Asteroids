@@ -44,7 +44,12 @@ def main():
         for updatable in updatables_group:
             updatable.update(dt)
 
-        
+        for asteroid in asteroids_group:
+            for shot in shots_group:
+                if shot.collision(asteroid):
+                    shot.kill()
+                    asteroid.split()
+
 
 
             
