@@ -34,6 +34,7 @@ def main():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                print("Game ended")
                 return
         screen.fill((0,0,0))
         
@@ -48,7 +49,7 @@ def main():
             for shot in shots_group:
                 if shot.collision(asteroid):
                     shot.kill()
-                    asteroid.split()
+                    asteroid.split(asteroids_group)
 
 
 
